@@ -26,7 +26,7 @@ async def approve(_, m : Message):
     try:
         add_group(m.chat.id)
         await app.approve_chat_join_request(op.id, kk.id)
-        await app.send_message(kk.id, "**Hello {}!\nWelcome To {}\n\n__Powerd By : @Teekam_jaat __**".format(m.from_user.mention, m.chat.title))
+        await app.send_message(kk.id, "**Hello {}!\nWelcome To {}\n\n__Powerd By : @TJ_Bots __**".format(m.from_user.mention, m.chat.title))
         add_user(kk.id)
     except errors.PeerIdInvalid as e:
         print("user isn't start bot(means group)")
@@ -54,15 +54,13 @@ async def op(_, m :Message):
         await m.reply_text("**⚠️Access Denied!⚠️\n\nPlease Join My Update Channel To Use Me.If You Joined The Channel Then Click On Check Again Button To Confirm.**", reply_markup=key)
         return 
     keyboard = InlineKeyboardMarkup(
-        [[
+        [[  
             InlineKeyboardButton("🎬 ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ", url="https://t.me/+boakQes5mKdlYTM1"),
             InlineKeyboardButton("🤖 ᴜᴘᴅᴀᴛᴇ", url="https://t.me/+rwgY_S_4Oo8zMGI1")
-        ],[
-                InlineKeyboardButton('👨‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ', url='https://t.me/teekam_jaat')
         ]]
     )
     add_user(m.from_user.id)
-    await m.reply_photo("https://envs.sh/j2m.mp4 https://envs.sh/GIt.jpg", caption="**🦊 Hello {}!\nI'm an auto approve [Admin Join Requests]({}) Bot.\nI can approve users in Groups/Channels.Add me to your chat and promote me to admin with add members permission.\n\n__Powered By : @Teekam_Jaat __**".format(m.from_user.mention, "https://t.me/telegram/153"), reply_markup=keyboard)
+    await m.reply_photo("https://envs.sh/j2m.mp4 nhihttps://envs.sh/GIt.jpg", caption="**🦊 Hello {}!\nI'm an auto approve [Admin Join Requests]({}) Bot.\nI can approve users in Groups/Channels.Add me to your chat and promote me to admin with add members permission.\n\n__Powered By : @TJ_Bots __**".format(m.from_user.mention, "https://t.me/telegram/153"), reply_markup=keyboard)
     
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ callback ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -75,15 +73,13 @@ async def chk(_, cb : CallbackQuery):
         await cb.answer("🙅‍♂️ You are not joined my channel first join channel then check again. 🙅‍♂️", show_alert=True)
         return 
     keyboard = InlineKeyboardMarkup(
-        [[
+        [[  
             InlineKeyboardButton("🎬 ᴍᴏᴠɪᴇ ᴄʜᴀɴɴᴇʟ", url="https://t.me/+boakQes5mKdlYTM1"),
             InlineKeyboardButton("🤖 ᴜᴘᴅᴀᴛᴇ", url="https://t.me/+rwgY_S_4Oo8zMGI1")
-        ],[
-                InlineKeyboardButton('👨‍💻 ᴅᴇᴠᴇʟᴏᴘᴇʀ', url='https://t.me/teekam_jaat')
         ]]
     )
     add_user(m.from_user.id)
-    await cb.edit_text(text="**🦊 Hello {}!\nI'm an auto approve [Admin Join Requests]({}) Bot.\nI can approve users in Groups/Channels.Add me to your chat and promote me to admin with add members permission.\n\n__Powered By : @Teekam_jaat __**".format(cb.from_user.mention, "https://t.me/telegram/153"), reply_markup=keyboard)
+    await cb.edit_text(text="**🦊 Hello {}!\nI'm an auto approve [Admin Join Requests]({}) Bot.\nI can approve users in Groups/Channels.Add me to your chat and promote me to admin with add members permission.\n\n__Powered By : @TJ_Bots __**".format(cb.from_user.mention, "https://t.me/telegram/153"), reply_markup=keyboard)
     
 
 #━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ info ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
